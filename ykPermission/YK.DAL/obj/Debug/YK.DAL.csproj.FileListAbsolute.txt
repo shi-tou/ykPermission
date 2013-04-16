@@ -1,0 +1,5 @@
+I:\ykPermission\ykPermission\YK.DAL\bin\Debug\YK.DAL.dll
+I:\ykPermission\ykPermission\YK.DAL\bin\Debug\YK.DAL.pdb
+I:\ykPermission\ykPermission\YK.DAL\obj\Debug\ResolveAssemblyReference.cache
+I:\ykPermission\ykPermission\YK.DAL\obj\Debug\YK.DAL.dll
+I:\ykPermission\ykPermission\YK.DAL\obj\Debug\YK.DAL.pdb

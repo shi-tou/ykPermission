@@ -1,0 +1,5 @@
+I:\ykPermission\ykPermission\YK.Common\bin\Debug\YK.Common.dll
+I:\ykPermission\ykPermission\YK.Common\bin\Debug\YK.Common.pdb
+I:\ykPermission\ykPermission\YK.Common\obj\Debug\ResolveAssemblyReference.cache
+I:\ykPermission\ykPermission\YK.Common\obj\Debug\YK.Common.dll
+I:\ykPermission\ykPermission\YK.Common\obj\Debug\YK.Common.pdb

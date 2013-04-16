@@ -1,0 +1,5 @@
+I:\ykPermission\ykPermission\YK.IDAL\bin\Debug\YK.IDAL.dll
+I:\ykPermission\ykPermission\YK.IDAL\bin\Debug\YK.IDAL.pdb
+I:\ykPermission\ykPermission\YK.IDAL\obj\Debug\ResolveAssemblyReference.cache
+I:\ykPermission\ykPermission\YK.IDAL\obj\Debug\YK.IDAL.dll
+I:\ykPermission\ykPermission\YK.IDAL\obj\Debug\YK.IDAL.pdb

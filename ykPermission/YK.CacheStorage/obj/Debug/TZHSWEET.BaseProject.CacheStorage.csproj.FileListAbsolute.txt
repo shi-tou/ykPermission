@@ -1,0 +1,9 @@
+E:\大学开发学习资料\MVC学习\TZHSWEET.UI.BaseProject\TZHSWEET.BaseProject.CacheStorage\bin\Debug\TZHSWEET.BaseProject.CacheStorage.dll
+E:\大学开发学习资料\MVC学习\TZHSWEET.UI.BaseProject\TZHSWEET.BaseProject.CacheStorage\bin\Debug\TZHSWEET.BaseProject.CacheStorage.pdb
+E:\大学开发学习资料\MVC学习\TZHSWEET.UI.BaseProject\TZHSWEET.BaseProject.CacheStorage\obj\Debug\TZHSWEET.BaseProject.CacheStorage.dll
+E:\大学开发学习资料\MVC学习\TZHSWEET.UI.BaseProject\TZHSWEET.BaseProject.CacheStorage\obj\Debug\TZHSWEET.BaseProject.CacheStorage.pdb
+E:\大学开发学习资料\MVC学习\TZHSWEET.MVC\TZHSWEET.UI.BaseProject\TZHSWEET.BaseProject.CacheStorage\bin\Debug\TZHSWEET.BaseProject.CacheStorage.dll
+E:\大学开发学习资料\MVC学习\TZHSWEET.MVC\TZHSWEET.UI.BaseProject\TZHSWEET.BaseProject.CacheStorage\bin\Debug\TZHSWEET.BaseProject.CacheStorage.pdb
+E:\大学开发学习资料\MVC学习\TZHSWEET.MVC\TZHSWEET.UI.BaseProject\TZHSWEET.BaseProject.CacheStorage\obj\Debug\TZHSWEET.BaseProject.CacheStorage.csprojResolveAssemblyReference.cache
+E:\大学开发学习资料\MVC学习\TZHSWEET.MVC\TZHSWEET.UI.BaseProject\TZHSWEET.BaseProject.CacheStorage\obj\Debug\TZHSWEET.BaseProject.CacheStorage.dll
+E:\大学开发学习资料\MVC学习\TZHSWEET.MVC\TZHSWEET.UI.BaseProject\TZHSWEET.BaseProject.CacheStorage\obj\Debug\TZHSWEET.BaseProject.CacheStorage.pdb
