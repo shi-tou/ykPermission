@@ -21,3 +21,8 @@ I:\ykPermission\ykPermission\YK.CacheStorage\bin\Debug\TZHSWEET.CacheStorage.pdb
 I:\ykPermission\ykPermission\YK.CacheStorage\obj\Debug\ResolveAssemblyReference.cache
 I:\ykPermission\ykPermission\YK.CacheStorage\obj\Debug\TZHSWEET.CacheStorage.dll
 I:\ykPermission\ykPermission\YK.CacheStorage\obj\Debug\TZHSWEET.CacheStorage.pdb
+E:\开发项目\ykPermission\ykPermission\YK.CacheStorage\bin\Debug\TZHSWEET.CacheStorage.dll
+E:\开发项目\ykPermission\ykPermission\YK.CacheStorage\bin\Debug\TZHSWEET.CacheStorage.pdb
+E:\开发项目\ykPermission\ykPermission\YK.CacheStorage\obj\Debug\ResolveAssemblyReference.cache
+E:\开发项目\ykPermission\ykPermission\YK.CacheStorage\obj\Debug\TZHSWEET.CacheStorage.dll
+E:\开发项目\ykPermission\ykPermission\YK.CacheStorage\obj\Debug\TZHSWEET.CacheStorage.pdb
