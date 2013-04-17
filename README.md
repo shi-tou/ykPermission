@@ -6,8 +6,15 @@
 
 项目结构：<br/>
 YK.BusinessLogicLayer--业务逻辑层<br/>
+--YK.BLL<br/>
+--YK.IBLL<br>
 YK.DataAccessLayer--数据访问层<br/>
+--YK.DAL<br/>
+--YK.IDAL<br/>
 YK.Domain--域，主要是实体<br/>
+--YK.Model<br/>
 YK.Infrastructure--公共设施(公用类)<br/>
+--YK.Common<br/>
+--YK.CacheStorage<br/>
 YK.UserInterface--用户界面
-
+--ykPermissionWebUI

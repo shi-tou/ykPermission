@@ -4,8 +4,9 @@
 
 <Workspace>
 	<Local Expanded="Yes">
-		<Model Expanded="Yes" ID="{D99D63E6-1199-4A4A-B553-AFDAABE1DDA7}" Name="Permission" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="Permission.pdm"/>
-		<Model Expanded="Yes" ID="{72797DD7-91A0-4E79-A5FE-6C583CC3A63A}" Name="Permission" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="Permission.cdm"/>
+		<Model Expanded="Yes" ID="{D99D63E6-1199-4A4A-B553-AFDAABE1DDA7}" Loaded="No" Name="Permission" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="Permission.pdm"/>
+		<Model Expanded="Yes" ID="{72797DD7-91A0-4E79-A5FE-6C583CC3A63A}" Loaded="No" Name="Permission" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="Permission.cdm"/>
+		<Model Expanded="Yes" ID="{D99D63E6-1199-4A4A-B553-AFDAABE1DDA7}" Name="Permission" Selected="Yes" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="Permission.pdm"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>

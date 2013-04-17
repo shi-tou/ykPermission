@@ -1,0 +1,62 @@
+﻿body,html{margin:0px; padding:0px;font-size:12px;}
+/*--------index--------*/
+.headL{float:left; height:50px; line-height:50px;}
+.headL h1{ margin:0px; padding:0px; font-size:30px; font-family:黑体; font-weight:bold; color:#0E2D5F;}
+.headR{float:right; height:30px; line-height:30px; margin-top:20px; margin-right:20px;}
+.headR span{ margin-right:10px;}
+.menuUL{ list-style:none; margin:0px; padding:0px;}
+.menuUL li{ height:30px;line-height:30px; color:#0E2D5F;}
+.menuUL a{ color:#000;}
+#login_out{ cursor:pointer;}
+/*----------main---------*/
+.main{ padding:5px;}
+.search{padding:20px 10px;}
+.blank{ height:10px; clear:left;}
+.action{ padding:10px;}
+.tb{width:148px; height:20px; line-height:20px;border:solid 1px #95B8E7;}
+.textarea{width:250px; height:40px; font-size:13px;border:solid 1px #95B8E7;}
+.readonly{ background-color:#eee;}
+.l{text-align:left;}
+.r{text-align:right;}
+.table{ font-size:12px;border:0px; margin-top:20px; line-height:25px; padding:0px 3px;}
+/*权限组*/
+#groupWin{width: 450px; height: auto; padding: 10px;}
+#groupForm dl{padding-left:14px;}
+#groupForm dt{float:left;padding:12px 0 4px;width:100px; text-align:right; margin:0px;}
+#groupForm dd{float:left;width:300px;text-align:left;height:auto;padding:8px 0;margin-left:5px;}
+/*管理员*/
+#adminWin{width: 450px; height: auto; padding: 10px;}
+#adminForm dl{padding-left:14px; float:left;}
+#adminForm dt{float:left;padding:12px 0 4px;width:100px; text-align:right; margin:0px;}
+#adminForm dd{float:left;width:300px;text-align:left;height:auto;padding:8px 0;margin-left:5px;}
+/*账号信息*/
+#accountinfo {width:380px; margin-left:200px;}
+#accountinfo dl{padding-left:14px; }
+#accountinfo dt{float:left;padding:12px 0 4px;width:100px; text-align:right; margin:0px;}
+#accountinfo dd{text-align:left;height:auto;padding:8px 0;margin-left:5px; }
+/*栏目属性*/
+#sortattributeWin{ width:400px;}
+#sortattributeWin dl{padding-left:14px; }
+#sortattributeWin dt{float:left;padding:12px 0 4px;width:100px; text-align:right; margin:0px;}
+#sortattributeWin dd{text-align:left;height:auto;padding:8px 0;margin-left:5px; }
+/*栏目*/
+#sortWin{ width:450px;}
+#sortWin dl{padding-left:14px; }
+#sortWin dt{float:left;padding:12px 0 4px;width:100px; text-align:right; margin:0px;}
+#sortWin dd{text-align:left;height:auto;padding:8px 0;margin-left:5px; }
+#sortWin textarea{ width:300px; height:38px;}
+/*栏目模板表单*/
+#templateWin{ width:800px;}
+#templateWin dl{padding-left:14px; }
+#templateWin dt{float:left;padding:12px 0 4px;width:100px; text-align:right; margin:0px;}
+#templateWin dd{text-align:left;height:auto;padding:8px 0;margin-left:5px; }
+#templatesource{ width:450px; height:300px;}
+#templateForm dl{padding-left:14px; }
+#templateForm dt{float:left;padding:12px 0 4px;width:100px; text-align:right; margin:0px;}
+#templateForm dd{text-align:left;height:auto;padding:8px 0;margin-left:5px; }
+templateWin0{width:800px;}
+/*产品*/
+#goodsWin{ width:450px;}
+#goodsWin dl{padding-left:14px; }
+#goodsWin dt{float:left;padding:12px 0 4px;width:100px; text-align:right; margin:0px;}
+#goodsWin dd{text-align:left;height:auto;padding:8px 0;margin-left:5px; }
