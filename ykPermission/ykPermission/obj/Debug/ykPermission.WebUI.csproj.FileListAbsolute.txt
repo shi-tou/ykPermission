@@ -8,3 +8,8 @@ E:\开发项目\ykPermission\ykPermission\ykPermission\bin\ykPermission.pdb
 E:\开发项目\ykPermission\ykPermission\ykPermission\obj\Debug\ResolveAssemblyReference.cache
 E:\开发项目\ykPermission\ykPermission\ykPermission\obj\Debug\ykPermission.dll
 E:\开发项目\ykPermission\ykPermission\ykPermission\obj\Debug\ykPermission.pdb
+G:\测试Project\ykPermission\ykPermission\ykPermission\bin\ykPermission.dll
+G:\测试Project\ykPermission\ykPermission\ykPermission\bin\ykPermission.pdb
+G:\测试Project\ykPermission\ykPermission\ykPermission\obj\Debug\ResolveAssemblyReference.cache
+G:\测试Project\ykPermission\ykPermission\ykPermission\obj\Debug\ykPermission.dll
+G:\测试Project\ykPermission\ykPermission\ykPermission\obj\Debug\ykPermission.pdb

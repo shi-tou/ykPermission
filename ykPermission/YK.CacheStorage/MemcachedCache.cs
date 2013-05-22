@@ -11,7 +11,7 @@ using System.Text;
 using Enyim.Caching;
 using Enyim.Caching.Memcached;
 
-namespace TZHSWEET.CacheStorage
+namespace YK.CacheStorage
 {
     /// <summary>
     /// 分布式Memcached缓存

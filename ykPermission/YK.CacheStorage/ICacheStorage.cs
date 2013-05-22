@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TZHSWEET.CacheStorage
+namespace YK.CacheStorage
 {
     /// <summary>
     /// 缓存接口

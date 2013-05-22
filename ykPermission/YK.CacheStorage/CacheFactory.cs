@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Configuration;
 
-namespace TZHSWEET.CacheStorage
+namespace YK.CacheStorage
 {
 
     /// <summary>

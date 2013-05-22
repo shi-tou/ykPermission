@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{03A16240-C6AC-4B81-B083-0737B1C31026}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -36,6 +36,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IActionColumnDAL.cs" />
+    <Compile Include="IActionDAL.cs" />
+    <Compile Include="IActionGroupDAL.cs" />
+    <Compile Include="IGroupDAL.cs" />
+    <Compile Include="IMasterDAL.cs" />
+    <Compile Include="IMasterGroupDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

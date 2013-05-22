@@ -5,7 +5,7 @@ using System.Text;
 using System.Web;
 using System.Web.Caching;
 using System.Collections;
-namespace TZHSWEET.CacheStorage
+namespace YK.CacheStorage
 {
     /// <summary>
     /// 默认的asp.net中Cache
