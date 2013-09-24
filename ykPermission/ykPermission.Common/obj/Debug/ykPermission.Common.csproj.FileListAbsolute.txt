@@ -1,0 +1,5 @@
+E:\学习Demo\ykPermission\ykPermission\ykPermission.Common\bin\Debug\ykPermission.Common.dll
+E:\学习Demo\ykPermission\ykPermission\ykPermission.Common\bin\Debug\ykPermission.Common.pdb
+E:\学习Demo\ykPermission\ykPermission\ykPermission.Common\obj\Debug\ResolveAssemblyReference.cache
+E:\学习Demo\ykPermission\ykPermission\ykPermission.Common\obj\Debug\ykPermission.Common.dll
+E:\学习Demo\ykPermission\ykPermission\ykPermission.Common\obj\Debug\ykPermission.Common.pdb

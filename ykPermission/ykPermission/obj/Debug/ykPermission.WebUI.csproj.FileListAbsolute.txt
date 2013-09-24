@@ -13,3 +13,8 @@ G:\测试Project\ykPermission\ykPermission\ykPermission\bin\ykPermission.pdb
 G:\测试Project\ykPermission\ykPermission\ykPermission\obj\Debug\ResolveAssemblyReference.cache
 G:\测试Project\ykPermission\ykPermission\ykPermission\obj\Debug\ykPermission.dll
 G:\测试Project\ykPermission\ykPermission\ykPermission\obj\Debug\ykPermission.pdb
+E:\学习Demo\ykPermission\ykPermission\ykPermission\bin\ykPermission.dll
+E:\学习Demo\ykPermission\ykPermission\ykPermission\bin\ykPermission.pdb
+E:\学习Demo\ykPermission\ykPermission\ykPermission\obj\Debug\ResolveAssemblyReference.cache
+E:\学习Demo\ykPermission\ykPermission\ykPermission\obj\Debug\ykPermission.dll
+E:\学习Demo\ykPermission\ykPermission\ykPermission\obj\Debug\ykPermission.pdb

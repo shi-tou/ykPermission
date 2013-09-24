@@ -1,0 +1,11 @@
+E:\学习Demo\ykPermission\ykPermission\ykPermission.Dao\bin\Debug\ykPermission.Dao.dll
+E:\学习Demo\ykPermission\ykPermission\ykPermission.Dao\bin\Debug\ykPermission.Dao.pdb
+E:\学习Demo\ykPermission\ykPermission\ykPermission.Dao\obj\Debug\ResolveAssemblyReference.cache
+E:\学习Demo\ykPermission\ykPermission\ykPermission.Dao\obj\Debug\ykPermission.Dao.dll
+E:\学习Demo\ykPermission\ykPermission\ykPermission.Dao\obj\Debug\ykPermission.Dao.pdb
+E:\学习Demo\ykPermission\ykPermission\ykPermission.Dao\bin\Debug\Spring.Core.dll
+E:\学习Demo\ykPermission\ykPermission\ykPermission.Dao\bin\Debug\Spring.Data.dll
+E:\学习Demo\ykPermission\ykPermission\ykPermission.Dao\bin\Debug\ykPermission.Common.dll
+E:\学习Demo\ykPermission\ykPermission\ykPermission.Dao\bin\Debug\Common.Logging.dll
+E:\学习Demo\ykPermission\ykPermission\ykPermission.Dao\bin\Debug\Spring.Aop.dll
+E:\学习Demo\ykPermission\ykPermission\ykPermission.Dao\bin\Debug\ykPermission.Common.pdb
