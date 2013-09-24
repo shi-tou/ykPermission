@@ -7,9 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace YkCms {
-    
-    
+namespace ykPermission.Web {
+        
     public partial class index {
         
         /// <summary>

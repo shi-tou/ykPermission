@@ -33,15 +33,17 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseService.cs" />
     <Compile Include="IBaseService.cs" />
+    <Compile Include="Master\IMasterService.cs" />
+    <Compile Include="Master\MasterService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -49,7 +51,12 @@
       <Project>{46DE5735-890A-4CD5-AA61-4C5FF2BC9A97}</Project>
       <Name>ykPermission.Dao</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ykPermission.Model\ykPermission.Model.csproj">
+      <Project>{167E5FD5-7427-4B2D-82D6-7B7028C386A2}</Project>
+      <Name>ykPermission.Model</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

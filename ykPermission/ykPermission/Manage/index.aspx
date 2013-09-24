@@ -1,15 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="YkCms.index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="ykPermission.Web.index" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>YkCms</title>
-    <link href="js/jquery-easyui-1.3.2/themes/default/easyui.css" rel="stylesheet" type="text/css" />
-    <link href="js/jquery-easyui-1.3.2/themes/icon.css" rel="stylesheet" type="text/css" />
-    <link href="css/admin.css" rel="stylesheet" type="text/css" />
-    <script src="js/jquery-easyui-1.3.2/jquery-1.8.0.min.js" type="text/javascript"></script>
-    <script src="js/jquery-easyui-1.3.2/jquery.easyui.min.js" type="text/javascript"></script>
-    <script src="js/msgbox.js" type="text/javascript"></script>
-    <script src="js/common.js" type="text/javascript"></script>
+    <title>小杨权限管理系统</title>
     <script src="js/menu.js" type="text/javascript"></script>
     <script language="javascript">
         $(function () {

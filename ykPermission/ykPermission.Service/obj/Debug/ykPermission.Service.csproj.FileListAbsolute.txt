@@ -11,3 +11,5 @@ E:\学习Demo\ykPermission\ykPermission\ykPermission.Service\bin\Debug\Spring.Co
 E:\学习Demo\ykPermission\ykPermission\ykPermission.Service\bin\Debug\Common.Logging.dll
 E:\学习Demo\ykPermission\ykPermission\ykPermission.Service\bin\Debug\ykPermission.Dao.pdb
 E:\学习Demo\ykPermission\ykPermission\ykPermission.Service\bin\Debug\ykPermission.Common.pdb
+E:\学习Demo\ykPermission\ykPermission\ykPermission.Service\bin\Debug\ykPermission.Model.dll
+E:\学习Demo\ykPermission\ykPermission\ykPermission.Service\bin\Debug\ykPermission.Model.pdb
