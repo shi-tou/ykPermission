@@ -13,3 +13,4 @@ E:\学习Demo\ykPermission\ykPermission\ykPermission.Service\bin\Debug\ykPermiss
 E:\学习Demo\ykPermission\ykPermission\ykPermission.Service\bin\Debug\ykPermission.Common.pdb
 E:\学习Demo\ykPermission\ykPermission\ykPermission.Service\bin\Debug\ykPermission.Model.dll
 E:\学习Demo\ykPermission\ykPermission\ykPermission.Service\bin\Debug\ykPermission.Model.pdb
+E:\学习Demo\ykPermission\ykPermission\ykPermission.Service\bin\Debug\Newtonsoft.Json.dll
