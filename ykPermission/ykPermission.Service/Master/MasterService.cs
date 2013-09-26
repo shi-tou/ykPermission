@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+<<<<<<< HEAD
+=======
+using System.Linq;
+>>>>>>> fedba778f283923aec32c5befacf6fc81e2aecba
 using System.Text;
 using System.Data;
 using ykPermission.Model;
@@ -33,6 +37,16 @@ namespace ykPermission.Service
                 return 2;
             if (Convert.ToString(dr["Password"]) != password)
                 return 3;
+<<<<<<< HEAD
+=======
+            MasterInfo minfo = new MasterInfo();
+            minfo.ID = Convert.ToInt32(dr["ID"]);
+            minfo.UserName = Convert.ToString(dr["UserName"]);
+            minfo.MasterName = Convert.ToString(dr["MasterName"]);
+            minfo.CreateTime = Convert.ToDateTime(dr["CreateTime"]);
+            System.Web.HttpContext.Current.Session["MasterInfo"] = minfo;
+            System.Web.HttpContext.Current.Session.Timeout = 20;
+>>>>>>> fedba778f283923aec32c5befacf6fc81e2aecba
             return 0;
         }
     }

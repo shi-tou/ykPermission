@@ -74,7 +74,10 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Extensions" />
+<<<<<<< HEAD
     <Reference Include="System.XML" />
+=======
+>>>>>>> fedba778f283923aec32c5befacf6fc81e2aecba
   </ItemGroup>
   <ItemGroup>
     <Content Include="Config\adminpage.xml" />
