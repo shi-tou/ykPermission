@@ -2,10 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+<<<<<<< HEAD
 using ykPermission.Service;
 using System.Data;
 using ykPermission.Model;
 using ykPermission.Common;
+=======
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using ykPermission.Service;
+>>>>>>> fedba778f283923aec32c5befacf6fc81e2aecba
 
 namespace ykPermission.Manage
 {
@@ -29,6 +35,7 @@ namespace ykPermission.Manage
         /// </summary>
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             string username = this.txtUserName.Text;
             string password = this.txtPassword.Text;
             if (username == "" || password == "")
@@ -37,6 +44,14 @@ namespace ykPermission.Manage
                 return;
             }
             int res = masterService.MasterLogin(username, password);
+=======
+            if (this.txtUserName.Text == "" || this.txtPassword.Text == "")
+            {
+                this.lblMsg.Text="账号/密码不能为空！";
+                return;
+            }
+            int res = masterService.MasterLogin(this.txtUserName.Text, this.txtPassword.Text);
+>>>>>>> fedba778f283923aec32c5befacf6fc81e2aecba
             if (res == 1)
             {
                 this.lblMsg.Text = "账号不存在！";
@@ -57,6 +72,7 @@ namespace ykPermission.Manage
                 this.txtPassword.Focus();
                 return;
             }
+<<<<<<< HEAD
             SetLoginInfo(username);
             Response.Redirect("Index.aspx");
         }
@@ -78,5 +94,9 @@ namespace ykPermission.Manage
             cookie.Value = DESEncrypt.Encrypt(json);
             Response.Cookies.Add(cookie);
         }
+=======
+            Response.Redirect("Index.aspx");
+        }
+>>>>>>> fedba778f283923aec32c5befacf6fc81e2aecba
     }
 }
