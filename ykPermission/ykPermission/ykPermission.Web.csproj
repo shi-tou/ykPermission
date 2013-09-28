@@ -74,10 +74,7 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Extensions" />
-<<<<<<< HEAD
     <Reference Include="System.XML" />
-=======
->>>>>>> fedba778f283923aec32c5befacf6fc81e2aecba
   </ItemGroup>
   <ItemGroup>
     <Content Include="Config\adminpage.xml" />
@@ -85,6 +82,9 @@
     <Content Include="Config\fongpage.xml" />
     <Content Include="Manage\Style\admin.css" />
     <Content Include="Manage\index.aspx" />
+    <Content Include="Manage\Style\login.css" />
+    <Content Include="Manage\Style\images\login-btn.jpg" />
+    <Content Include="Manage\Style\images\login-bg.jpg" />
     <Content Include="Manage\Style\js\AjaxCommon.js" />
     <Content Include="Manage\Style\js\common.js" />
     <Content Include="Manage\Style\js\customValidate.js" />
@@ -600,7 +600,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Manage\Style\images\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Manage\Style\easyui\demo\accordion\datagrid_data1.json" />

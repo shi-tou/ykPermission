@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>小杨权限管理系统</title>
-    <script src="js/menu.js" type="text/javascript"></script>
+    <script src="Style/js/menu.js" type="text/javascript"></script>
     <script language="javascript">
         $(function () {
             ShowTime("time")

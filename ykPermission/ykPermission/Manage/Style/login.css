@@ -1,0 +1,8 @@
+﻿body,html{background:#eaeaea;margin:0px; padding:0px;font-size:12px; font-family:微软雅黑;}
+.box{width:419px; height:284px; position:absolute; left:50%; top:50%; margin: -142px 0 0 -209px;; background:#fff url(images/login-bg.jpg) no-repeat; }
+.title{margin:20px 0 0 20px; line-height:32px; color:#fff; font-size:16px; font-weight:bold;}
+.txt{width:160px; height:22px; line-height:22px; border:none; background:#F4F4F4;position: absolute; color:#8c8c8c; }
+#txtUserName{ left:170px; top:95px;}
+#txtPassword{ left:170px; top:142px;}
+.action{margin:150px 0 0 140px;}
+.btn{ width:112px; height:33px; border:none; background:url(images/login-btn.jpg) no-repeat; color:#fff;}

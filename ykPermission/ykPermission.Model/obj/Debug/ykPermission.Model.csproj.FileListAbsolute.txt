@@ -3,3 +3,8 @@ E:\学习Demo\ykPermission\ykPermission\ykPermission.Model\bin\Debug\ykPermissio
 E:\学习Demo\ykPermission\ykPermission\ykPermission.Model\obj\Debug\ResolveAssemblyReference.cache
 E:\学习Demo\ykPermission\ykPermission\ykPermission.Model\obj\Debug\ykPermission.Model.dll
 E:\学习Demo\ykPermission\ykPermission\ykPermission.Model\obj\Debug\ykPermission.Model.pdb
+E:\学习Demo\ykPermission22\ykPermission\ykPermission.Model\bin\Debug\ykPermission.Model.dll
+E:\学习Demo\ykPermission22\ykPermission\ykPermission.Model\bin\Debug\ykPermission.Model.pdb
+E:\学习Demo\ykPermission22\ykPermission\ykPermission.Model\obj\Debug\ResolveAssemblyReference.cache
+E:\学习Demo\ykPermission22\ykPermission\ykPermission.Model\obj\Debug\ykPermission.Model.dll
+E:\学习Demo\ykPermission22\ykPermission\ykPermission.Model\obj\Debug\ykPermission.Model.pdb
