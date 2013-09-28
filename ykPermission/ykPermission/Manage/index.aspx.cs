@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ykPermission.Web
+namespace ykPermission.Web.Manage
 {
     public partial class index : AdminPage
     {

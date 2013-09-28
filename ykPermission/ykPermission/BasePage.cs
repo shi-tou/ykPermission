@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Configuration;
-using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
@@ -60,6 +59,47 @@ namespace ykPermission.Web
         public void InvokeScript(string strScript)
         {
             System.Web.UI.ScriptManager.RegisterStartupScript((System.Web.UI.Page)HttpContext.Current.CurrentHandler, typeof(System.Web.UI.Page), " ", strScript, true);
+        }
+        /// <summary>
+        /// 获得request参数的string类型值
+        /// </summary>
+        /// <param name="strName">参数</param>
+        /// <param name="defValue">缺省值</param>
+        /// <returns>参数的string类型值</returns>
+        public string GetRequestStr(string strName, string defaultValue)
+        {
+            string vaule = Convert.ToString(HttpContext.Current.Request[strName]);
+            if (vaule != null && vaule != "")
+            {
+                return vaule;
+            }
+            else
+            {
+                return defaultValue;
+            }
+        }
+        /// <summary>
+        /// 获得request参数的int类型值
+        /// </summary>
+        /// <param name="strName">参数</param>
+        /// <returns>参数的int类型值</returns>
+        public int GetRequestInt(string strName, int defaultValue)
+        {
+            string vaule = HttpContext.Current.Request[strName];
+            if (vaule != null && vaule != "")
+                return Convert.ToInt16(HttpContext.Current.Request[strName]);
+            else
+                return defaultValue;
+        }
+        /// <summary>
+        /// 获得request参数的bool类型值
+        /// </summary>
+        /// <param name="strName">Url参数</param>
+        /// <param name="defValue">缺省值</param>
+        /// <returns>Url参数的int类型值</returns>
+        public bool GetRequestBool(string strName)
+        {
+            return Convert.ToBoolean(HttpContext.Current.Request[strName]);
         }
     }
 

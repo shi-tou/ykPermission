@@ -3,15 +3,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>
-    </ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{CC032F83-103B-4970-8969-14647CD9893A}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ykPermission</RootNamespace>
-    <AssemblyName>ykPermission</AssemblyName>
+    <RootNamespace>ykPermission.Web</RootNamespace>
+    <AssemblyName>ykPermission.Web</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -74,10 +73,8 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Extensions" />
-<<<<<<< HEAD
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System.XML" />
-=======
->>>>>>> fedba778f283923aec32c5befacf6fc81e2aecba
   </ItemGroup>
   <ItemGroup>
     <Content Include="Config\adminpage.xml" />
@@ -85,7 +82,10 @@
     <Content Include="Config\fongpage.xml" />
     <Content Include="Manage\Style\admin.css" />
     <Content Include="Manage\index.aspx" />
-    <Content Include="Manage\Style\js\AjaxCommon.js" />
+    <Content Include="Manage\Style\js\master.js" />
+    <Content Include="Manage\Style\login.css" />
+    <Content Include="Manage\Style\images\login-btn.jpg" />
+    <Content Include="Manage\Style\images\login-bg.jpg" />
     <Content Include="Manage\Style\js\common.js" />
     <Content Include="Manage\Style\js\customValidate.js" />
     <Content Include="Manage\Style\easyui\changelog.txt" />
@@ -575,6 +575,13 @@
     <Compile Include="BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Manage\Ajax\Master.ashx.cs">
+      <DependentUpon>Master.ashx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\BaseAjax.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Manage\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -599,10 +606,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Manage\Style\images\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Manage\Ajax\Master.ashx" />
     <None Include="Manage\Style\easyui\demo\accordion\datagrid_data1.json" />
     <None Include="Manage\Style\easyui\demo\combobox\combobox_data1.json" />
     <None Include="Manage\Style\easyui\demo\combogrid\datagrid_data1.json" />
@@ -645,8 +649,12 @@
       <Name>ykPermission.Service</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!--<Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />-->
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">

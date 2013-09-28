@@ -85,7 +85,7 @@ function dealAjaxUrl(url) {
         ajaxurl = url + "&ajaxGuid=" + guid;
     else //url不带参数
         ajaxurl = url + "?ajaxGuid=" + guid;
-    ajaxurl += "&url=" + location.href; //加上URL参数，用于出现错误时返回上一页
+   // ajaxurl += "&url=" + location.href; //加上URL参数，用于出现错误时返回上一页
     return ajaxurl;
 }
 //根据时间生成GUID
@@ -108,33 +108,34 @@ function GetGuid() {
     var guid = month + date + hour + minu + sec + mill;
     return guid;
 }
-//设置文本框只读/禁用，并设置样式
-function setReadonly(obj) {
-    obj.attr('readonly', 'readonly');
-    obj.addClass('readonly');
-}
-function setDisable(obj) {
-    obj.attr('disabled', true);
-    obj.addClass('readonly');
-}
-//取消文本框只读/禁用，并取消样式
-function cancelReadonly(obj) {
-    obj.removeAttr('readonly');
-    obj.removeClass('readonly');
-}
-function cancelDisable(obj) {
-    obj.removeAttr('disabled');
-    obj.removeClass('readonly');
-}
 //easyui-datagrid设置分页控件
 function setPager(p) {
     $(p).pagination({
-        pageSize: 10, //每页显示的记录条数，默认为10 
+        pageSize: 20, //每页显示的记录条数，默认为10 
         pageList: [10, 20, 50], //可以设置每页记录条数的列表 
         beforePageText: '第', //页数文本框前显示的汉字 
         afterPageText: '页    共 {pages} 页',
         displayMsg: '<div style="padding-right:20px;">当前显示 <b>{from} - {to}</b> 条记录   共 <b>{total}</b> 条记录<div>'
     });
+}
+function GetDisabled(v) {
+    if (v || v == 'true') {
+        return '<span style="color:red;">是<span>';
+    }
+    else
+        return '否';
+}
+function FormatTime(date) {
+    if (date == '' || date == null)
+        return '';
+    date = date.substr(0, 4) + "/" + date.substr(5, 2) + "/" + date.substr(8, 2) + " " + date.substr(11, 5);
+    date = new Date(date);
+    var y = date.getFullYear();
+    var m = date.getMonth() + 1;
+    var d = date.getDate();
+    var h = date.getHours() > 9 ? date.getHours().toString() : '0' + date.getHours();
+    var mm = date.getMinutes() > 9 ? date.getMinutes().toString() : '0' + date.getMinutes();
+    return y + '-' + (m < 10 ? ('0' + m) : m) + '-' + (d < 10 ? ('0' + d) : d) + " " + h + ":" + mm;
 }
 //实现iframe自适应高度
 function SetWinHeight(obj,height) {
@@ -149,40 +150,4 @@ function SetWinHeight(obj,height) {
             }
         }
     }
-}
-//js字符过滤html标签互转函数
-function htmlencode(str) {
-    str = str.replace(/&/g, '&amp;');
-    str = str.replace(/</g, '&lt;');
-    str = str.replace(/>/g, '&gt;');
-    str = str.replace(/(?:t| |v|r)*n/g, '<br />');
-    str = str.replace(/ /g, '&nbsp; ');
-    str = str.replace(/t/g, '&nbsp;&nbsp;&nbsp;');
-    str = str.replace(/x22/g, '&quot;');
-    str = str.replace(/x27/g, '&#39;');
-    return str;
-}
-
-function htmldecode(str) {
-    str = str.replace('&lt;', '<');
-    str = str.replace('&gt;', '>');
-    str = str.replace('&nbsp;', ' ');
-    str = str.replace('<br>', '\n');
-    str = str.replace('&amp;', '&');
-    str = str.replace('&quot;', '"');
-    return str;
-}
-
-function textencode(str) {
-    str = str.replace(/&amp;/gi, '&');
-    str = str.replace(/</g, '&lt;');
-    str = str.replace(/>/g, '&gt;');
-    return str;
-}
-
-function textdecode(str) {
-    str = str.replace(/&amp;/gi, '&');
-    str = str.replace(/&lt;/gi, '<');
-    str = str.replace(/&gt;/gi, '>');
-    return str;
 }

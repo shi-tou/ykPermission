@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{B38D3659-F52A-4839-8199-771BE66D7E0E}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -38,7 +38,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Web" />
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
@@ -49,6 +48,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ykPermission.Common\ykPermission.Common.csproj">
+      <Project>{28E32696-9CBD-4C0B-BED7-416EF4A08975}</Project>
+      <Name>ykPermission.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ykPermission.Dao\ykPermission.Dao.csproj">
       <Project>{46DE5735-890A-4CD5-AA61-4C5FF2BC9A97}</Project>
       <Name>ykPermission.Dao</Name>

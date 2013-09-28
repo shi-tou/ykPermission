@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Configuration;
-using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
@@ -9,12 +8,9 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using ykPermission.Model;
-<<<<<<< HEAD
 using ykPermission.Common;
-=======
->>>>>>> fedba778f283923aec32c5befacf6fc81e2aecba
 
-namespace ykPermission.Web
+namespace ykPermission.Web.Manage
 {
     public class AdminPage : BasePage
     {
@@ -23,7 +19,6 @@ namespace ykPermission.Web
         /// </summary>
         public MasterInfo MasterInfo
         {
-<<<<<<< HEAD
             get
             {
                 if (Request.Cookies["MasterInfo"] == null)
@@ -32,19 +27,6 @@ namespace ykPermission.Web
                 }
                 string str = DESEncrypt.Decrypt(Request.Cookies["MasterInfo"].Value);
                 return (MasterInfo)Newtonsoft.Json.JsonConvert.DeserializeObject(str, typeof(MasterInfo));
-=======
-            set
-            {
-                Session["MasterInfo"] = value;
-            }
-            get
-            {
-                if (Session["MasterInfo"] == null)
-                {
-                    return null;
-                }
-                return (MasterInfo)Session["MasterInfo"];
->>>>>>> fedba778f283923aec32c5befacf6fc81e2aecba
             }
         }
         protected override void OnInit(EventArgs e)
@@ -60,27 +42,18 @@ namespace ykPermission.Web
         {
             if (MasterInfo == null)
             {
-<<<<<<< HEAD
                 RegistScript("alert('未登录或登录已失效！');window.parent.location.href='/Manage/Login.aspx';");
             }
-=======
-                RegistScript("alert('未登录或登录已失效！');window.parent.location.href='/Admin/Login.aspx';");
-            }
             return;
->>>>>>> fedba778f283923aec32c5befacf6fc81e2aecba
         }
         /// <summary>
         /// 注册INC脚本块
         /// </summary>
         public void RegisterIncScriptBlock()
         {
-<<<<<<< HEAD
-=======
-            //E:\学习Demo\ykPermission\ykPermission\ykPermission
->>>>>>> fedba778f283923aec32c5befacf6fc81e2aecba
-            this.Header.Controls.AddAt(1, RegistCSS("/Manage/Style/easyui/themes/default/easyui.css"));
+            this.Header.Controls.AddAt(1, RegistCSS("/Manage/Style/easyui/themes/bootstrap/easyui.css"));
             this.Header.Controls.AddAt(2, RegistCSS("/Manage/Style/easyui/themes/icon.css"));
-            this.Header.Controls.AddAt(3, RegistCSS("/Manage/Style/main.css"));
+            this.Header.Controls.AddAt(3, RegistCSS("/Manage/Style/admin.css"));
 
             this.Header.Controls.AddAt(4, RegistJavaScript("/Manage/Style/easyui/jquery-1.8.0.min.js"));
             this.Header.Controls.AddAt(5, RegistJavaScript("/Manage/Style/easyui/jquery.easyui.min.js"));
@@ -104,46 +77,6 @@ namespace ykPermission.Web
         {
             this.ClientScript.RegisterClientScriptBlock(this.GetType(), "", "<script>" + strScript + "</script>");
         }
-        /// <summary>
-        /// 获得request参数的string类型值
-        /// </summary>
-        /// <param name="strName">参数</param>
-        /// <param name="defValue">缺省值</param>
-        /// <returns>参数的string类型值</returns>
-        public string GetRequestStr(string strName, string defaultValue)
-        {
-            string vaule = Convert.ToString(HttpContext.Current.Request[strName]);
-            if (vaule != null && vaule != "")
-            {
-                return vaule;
-            }
-            else
-            {
-                return defaultValue;
-            }
-        }
-        /// <summary>
-        /// 获得request参数的int类型值
-        /// </summary>
-        /// <param name="strName">参数</param>
-        /// <returns>参数的int类型值</returns>
-        public int GetRequestInt(string strName, int defaultValue)
-        {
-            string vaule = HttpContext.Current.Request[strName];
-            if (vaule != null && vaule != "")
-                return Convert.ToInt16(HttpContext.Current.Request[strName]);
-            else
-                return defaultValue;
-        }
-        /// <summary>
-        /// 获得request参数的bool类型值
-        /// </summary>
-        /// <param name="strName">Url参数</param>
-        /// <param name="defValue">缺省值</param>
-        /// <returns>Url参数的int类型值</returns>
-        public bool GetRequestBool(string strName)
-        {
-            return Convert.ToBoolean(HttpContext.Current.Request[strName]);
-        }
+        
     }
 }

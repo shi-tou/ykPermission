@@ -4,6 +4,10 @@
   <object type="Manage/Login.aspx">
     <property name="MasterService" ref="masterService"/>
   </object>
+  <!--Master.ashx-->
+  <object type="ykPermission.Web.Manage.Ajax.Master,ykPermission.Web">
+    <property name="MasterService" ref="masterService"/>
+  </object>
 </objects>
 
 
