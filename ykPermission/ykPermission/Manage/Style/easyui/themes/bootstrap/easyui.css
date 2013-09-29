@@ -2150,10 +2150,10 @@ a.s-btn-plain-active {
   position: absolute;
   top: 0px;
   left: 8px;
-  width: 150px;
+  width: auto;
   border-width: 1px;
   border-style: solid;
-  padding: 3px 5px;
+  padding: 3px;
   z-index: 9900001;
   font-size: 12px;
 }

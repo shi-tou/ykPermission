@@ -596,6 +596,13 @@
     <Compile Include="Manage\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Manage\Master\MasterAdd.aspx.cs">
+      <DependentUpon>MasterAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Master\MasterAdd.aspx.designer.cs">
+      <DependentUpon>MasterAdd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Manage\Master\MasterList.aspx.cs">
       <DependentUpon>MasterList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -607,6 +614,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Manage\Ajax\Master.ashx" />
+    <Content Include="Manage\Master\MasterAdd.aspx" />
     <None Include="Manage\Style\easyui\demo\accordion\datagrid_data1.json" />
     <None Include="Manage\Style\easyui\demo\combobox\combobox_data1.json" />
     <None Include="Manage\Style\easyui\demo\combogrid\datagrid_data1.json" />
