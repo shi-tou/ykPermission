@@ -13,7 +13,7 @@
 <body class="easyui-layout">
     <form id="form1" runat="server">
         <!--顶部-->
-        <div data-options="region:'north',border:false,split:false" style="height:70px;background:#E6EEF8;padding:10px;">
+        <div data-options="region:'north',border:false,split:false" style="height:70px;background:#f2f2f2;padding:10px;">
             <div class="headL"><h1 style="float:left;">权限管理系统</h1><span style="float:left;">&nbsp;--&nbsp;power by yangliangbin</span></div>
             <div class="headR">当前时间：<span id="time"></span><span onclick="adminLoginOut();">退出登录</span></div>
         </div>
