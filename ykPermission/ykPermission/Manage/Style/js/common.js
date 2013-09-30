@@ -109,7 +109,8 @@ function GetGuid() {
     return guid;
 }
 //easyui-datagrid设置分页控件
-function setPager(p) {
+function SetPager(tab) {
+    var p = tab.datagrid('getPager')
     $(p).pagination({
         pageSize: 20, //每页显示的记录条数，默认为10 
         pageList: [10, 20, 50], //可以设置每页记录条数的列表 
@@ -118,6 +119,52 @@ function setPager(p) {
         displayMsg: '<div style="padding-right:20px;">当前显示 <b>{from} - {to}</b> 条记录   共 <b>{total}</b> 条记录<div>'
     });
 }
+//打开弹出窗口
+function OpenWin(title, w, h, url) {
+    document.getElementById("iframe").src = url;
+    $('#win').window({
+        title: title,
+        width: w,
+        height: h,
+        modal: true,
+        left: (document.body.clientWidth - w) * 0.5,
+        closed: false
+    });
+}
+//打开弹出窗口(最大化)
+function OpenMaxWin(title, url) {
+    document.getElementById("iframe").src = url;
+    $('#win').window({
+        title: title,
+        modal: true,
+        closed: false,
+        top: 0,
+        left: 0,
+        //shadow: false,
+        //width: $(document).width() - 20,
+        //height: $(window).height()
+        fit: true
+    });
+}
+//关闭弹出框
+function CloseWin(msg, fun) {
+    parent.$('#win').window
+    ({
+        closed: true
+    });
+    if (msg != undefined && msg != null && msg != '') {
+        parent.ShowMsg(msg);
+    }
+    if (fun != undefined && fun != null && fun != '') {
+        fun();
+    }
+}
+//获取选中行
+function GetSelectValue(tab) {
+    var rows = $('#' + tab).datagrid('getSelections');
+    return rows;
+}
+//禁用状态
 function GetDisabled(v) {
     if (v || v == 'true') {
         return '<span style="color:red;">是<span>';
@@ -138,16 +185,27 @@ function FormatTime(date) {
     return y + '-' + (m < 10 ? ('0' + m) : m) + '-' + (d < 10 ? ('0' + d) : d) + " " + h + ":" + mm;
 }
 //实现iframe自适应高度
-function SetWinHeight(obj,height) {
+function SetWinHeight(obj, height) {
     var win = obj;
     if (document.getElementById) {
         if (win && !window.opera) {
             if (win.contentDocument && win.contentDocument.body.offsetHeight) {
-                win.height = ((win.contentDocument.body.offsetHeight < height) ? height : win.contentDocument.body.offsetHeight);
+                win.height = win.contentDocument.body.offsetHeight;
             }
             else if (win.Document && win.Document.body.scrollHeight) {
-                win.height = ((win.Document.body.scrollHeight < height) ? height : win.Document.body.scrollHeight);
+                win.height = win.Document.body.scrollHeight;
             }
         }
     }
+//    var win = obj;
+//    if (document.getElementById) {
+//        if (win && !window.opera) {
+//            if (win.contentDocument && win.contentDocument.body.offsetHeight) {
+//                win.height = ((win.contentDocument.body.offsetHeight < height) ? height : win.contentDocument.body.offsetHeight);
+//            }
+//            else if (win.Document && win.Document.body.scrollHeight) {
+//                win.height = ((win.Document.body.scrollHeight < height) ? height : win.Document.body.scrollHeight);
+//            }
+//        }
+//    }
 }

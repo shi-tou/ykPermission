@@ -175,7 +175,9 @@ namespace ykPermission.Dao
         /// </summary>
         public DataTable GetData(string tableName)
         {
-            return GetData(tableName, "*", "");
+            DataTable dt = GetData(tableName, "*", "");
+            dt.TableName = tableName;
+            return dt;
         }
         /// <summary>
         /// 获取DataTable表数据

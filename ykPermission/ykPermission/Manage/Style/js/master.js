@@ -12,11 +12,11 @@ function GetList() {
     var queryParams = { 'action': 'GetMasterList'};
     var tab = $('#ListTable');
     tab.datagrid({
-        title: '游艇列表',
+        title: '用户列表',
         url: dealAjaxUrl(url),
         columns: [[
                         { field: 'ID', title: '', width: 30, align: 'center',checkbox: true },
-                        { field: 'UserName', title: '登录名', width: 100, align: 'center' },
+                        { field: 'UserName', title: '用户名', width: 100, align: 'center' },
                         { field: 'MasterName', title: '姓名', width: 100, align: 'center' },
                         { field: 'Disabled', title: '禁用', width: 60, align: 'center', formatter: GetDisabled },
                         { field: 'CreateTime', title: '创建时间', width: 120, align: 'center', formatter: FormatTime },
@@ -31,18 +31,18 @@ function GetList() {
         nowrap: false
     });
     //设置分页
-    setPager(tab);
+    SetPager(tab);
 }
 //添加
 function Add() {
-    OpenMaxWin('添加用户', '/Master/MasterAdd.aspx');
+    OpenWin('添加用户', 400, 300, '/Manage/Master/MasterAdd.aspx');
 }
 //修改
 function Edit() {
     var rows = GetSelectValue('ListTable');
     if (rows.length == 1) {
         id = rows[0].ID;
-        OpenMaxWin('修改用户', '/Master/MasterAdd.aspx?ID=' + id);
+        OpenWin('修改用户',400, 300, '/Manage/Master/MasterAdd.aspx?ID=' + id);
     }
     else {
         AlertInfo('操作提示', '请选择一条要修改的记录！');

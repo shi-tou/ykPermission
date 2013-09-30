@@ -5,4 +5,4 @@
 #txtUserName{ left:170px; top:95px;}
 #txtPassword{ left:170px; top:142px;}
 .action{margin:150px 0 0 140px;}
-.btn{ width:112px; height:33px; border:none; background:url(images/login-btn.jpg) no-repeat; color:#fff;}
+.btn{ width:112px; height:33px; border:none; background:url(images/login-btn.jpg) no-repeat; color:#fff; cursor:pointer;}

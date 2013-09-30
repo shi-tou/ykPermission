@@ -141,18 +141,26 @@ function promptBox(title, msg) {
     });
 }
 //弹出消息框
-function alertMsg(title,msg) {
+function AlertMsg(title,msg) {
     $.messager.alert(title,msg);
 }
-function alertError(title, msg) {
+function AlertError(title, msg) {
     $.messager.alert(title, '<div style="line-height:30px;">' + msg + '</div>', 'error');
 }
-function alertInfo(title, msg) {
+function AlertInfo(title, msg) {
     $.messager.alert(title, '<div style="line-height:30px;">' + msg + '</div>', 'info');
 }
-function alertQuestion(title, msg) {
+function AlertQuestion(title, msg) {
     $.messager.alert(title, '<div style="line-height:30px;">' + msg + '</div>', 'question');
 }
-function alertWaring(title, msg) {
+function AlertWaring(title, msg) {
     $.messager.alert(title, '<div style="line-height:30px;">' + msg + '</div>', 'warning');
+}
+//提示信息
+function ShowMsg(msg) {
+    $.messager.show({
+        title: '操作提示',
+        msg: msg,
+        showType: 'slide'
+    });
 }

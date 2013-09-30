@@ -12,51 +12,15 @@
 .main{ padding:5px;}
 .search{padding:20px 10px;}
 .blank{ height:10px; clear:left;}
-.action{ padding:10px;}
-.tb{width:148px; height:20px; line-height:20px;border:solid 1px #95B8E7;}
-.textarea{width:250px; height:40px; font-size:13px;border:solid 1px #95B8E7;}
-.readonly{ background-color:#eee;}
-.l{text-align:left;}
-.r{text-align:right;}
-.table{ font-size:12px;border:0px; margin-top:20px; line-height:25px; padding:0px 3px;}
-/*权限组*/
-#groupWin{width: 450px; height: auto; padding: 10px;}
-#groupForm dl{padding-left:14px;}
-#groupForm dt{float:left;padding:12px 0 4px;width:100px; text-align:right; margin:0px;}
-#groupForm dd{float:left;width:300px;text-align:left;height:auto;padding:8px 0;margin-left:5px;}
-/*管理员*/
-#adminWin{width: 450px; height: auto; padding: 10px;}
-#adminForm dl{padding-left:14px; float:left;}
-#adminForm dt{float:left;padding:12px 0 4px;width:100px; text-align:right; margin:0px;}
-#adminForm dd{float:left;width:300px;text-align:left;height:auto;padding:8px 0;margin-left:5px;}
-/*账号信息*/
-#accountinfo {width:380px; margin-left:200px;}
-#accountinfo dl{padding-left:14px; }
-#accountinfo dt{float:left;padding:12px 0 4px;width:100px; text-align:right; margin:0px;}
-#accountinfo dd{text-align:left;height:auto;padding:8px 0;margin-left:5px; }
-/*栏目属性*/
-#sortattributeWin{ width:400px;}
-#sortattributeWin dl{padding-left:14px; }
-#sortattributeWin dt{float:left;padding:12px 0 4px;width:100px; text-align:right; margin:0px;}
-#sortattributeWin dd{text-align:left;height:auto;padding:8px 0;margin-left:5px; }
-/*栏目*/
-#sortWin{ width:450px;}
-#sortWin dl{padding-left:14px; }
-#sortWin dt{float:left;padding:12px 0 4px;width:100px; text-align:right; margin:0px;}
-#sortWin dd{text-align:left;height:auto;padding:8px 0;margin-left:5px; }
-#sortWin textarea{ width:300px; height:38px;}
-/*栏目模板表单*/
-#templateWin{ width:800px;}
-#templateWin dl{padding-left:14px; }
-#templateWin dt{float:left;padding:12px 0 4px;width:100px; text-align:right; margin:0px;}
-#templateWin dd{text-align:left;height:auto;padding:8px 0;margin-left:5px; }
-#templatesource{ width:450px; height:300px;}
-#templateForm dl{padding-left:14px; }
-#templateForm dt{float:left;padding:12px 0 4px;width:100px; text-align:right; margin:0px;}
-#templateForm dd{text-align:left;height:auto;padding:8px 0;margin-left:5px; }
-templateWin0{width:800px;}
-/*产品*/
-#goodsWin{ width:450px;}
-#goodsWin dl{padding-left:14px; }
-#goodsWin dt{float:left;padding:12px 0 4px;width:100px; text-align:right; margin:0px;}
-#goodsWin dd{text-align:left;height:auto;padding:8px 0;margin-left:5px; }
+.fl{ float:left;}
+.fr{ float:right;}
+.tl{text-align:left;}
+.tr{text-align:right;}
+.tb{ padding:5px; height:auto; display:none;}
+.win{display:none; padding: 0px; margin: auto;}
+.infotable{ line-height:30px; margin-top:20px;}
+.txt{width:148px; height:20px; line-height:20px;border:solid 1px #d4d4d4;}
+.txt:hover{ border:solid 1px #4BBA12}
+.textarea{width:250px; height:40px; font-size:13px;border:solid 1px #efefef;}
+.action{ border-top:solid 1px #efefef; padding:20px 0px 0px 100px;}
+.btn{ width:112px; height:33px; border:none; background:url(images/login-btn.jpg) no-repeat; color:#fff; cursor:pointer;}
