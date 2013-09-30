@@ -1,5 +1,5 @@
-﻿//文件名：master.js
-//描述：用户管理
+﻿//文件名：action.js
+//描述：权限管理
 //时间：2013-09-29
 //创建人：杨良斌
 
@@ -9,10 +9,10 @@ $(function() {
 var url = '/Manage/Ajax/Master.ashx';
 //获取用户列表
 function GetList() {
-    var queryParams = { 'action': 'GetMasterList'};
+    var queryParams = { 'action': 'GetActionList'};
     var tab = $('#ListTable');
     tab.datagrid({
-        title: '用户列表',
+        title: '权限列表',
         url: dealAjaxUrl(url),
         columns: [[
                         { field: 'ID', title: '', width: 30, align: 'center',checkbox: true },
@@ -35,14 +35,14 @@ function GetList() {
 }
 //添加
 function Add() {
-    OpenWin('添加用户', 400, 300, '/Manage/Master/MasterAdd.aspx');
+    OpenWin('添加用户', 400, 300, '/Manage/Master/ActionAdd.aspx');
 }
 //修改
 function Edit() {
     var rows = GetSelectValue('ListTable');
     if (rows.length == 1) {
         id = rows[0].ID;
-        OpenWin('修改用户',400, 300, '/Manage/Master/MasterAdd.aspx?ID=' + id);
+        OpenWin('修改用户',400, 300, '/Manage/Master/ActionAdd.aspx?ID=' + id);
     }
     else {
         AlertInfo('操作提示', '请选择一条要修改的记录！');
@@ -58,7 +58,7 @@ function Delete() {
             if (r) {
                 $.ajax({
                     url: dealAjaxUrl(url),
-                    data: 'action=DeleteMaster&ID=' + id,
+                    data: 'action=DeleteAction&ID=' + id,
                     dataType: 'json',
                     type: 'POST',
                     success: function(data) {

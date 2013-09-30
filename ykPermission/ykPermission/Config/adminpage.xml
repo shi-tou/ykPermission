@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <objects xmlns="http://www.springframework.net">
   <!--登录-->
-  <object type="Manage/Login.aspx">
-    <property name="MasterService" ref="masterService"/>
-  </object>
+	<object type="Manage/Login.aspx">
+		<property name="MasterService" ref="masterService"/>
+	</object>
   <!--Master.ashx-->
-  <object type="ykPermission.Web.Manage.Ajax.Master,ykPermission.Web">
-    <property name="MasterService" ref="masterService"/>
-  </object>
+	<object type="ykPermission.Web.Manage.Ajax.Master,ykPermission.Web">
+		<property name="MasterService" ref="masterService"/>
+	</object>
+	<object type="Manage/Master/MasterAdd.aspx">
+		<property name="MasterService" ref="masterService"/>
+	</object>
 </objects>
-
-
-

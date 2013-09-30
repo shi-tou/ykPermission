@@ -31,10 +31,10 @@ namespace ykPermission.Service
             DataTable dt = GetDataByKey("T_Master", "UserName", username);
             if (dt.Rows.Count == 0)
                 return 1;
-            DataRow  dr=dt.Rows[0];
+            DataRow dr = dt.Rows[0];
             if (Convert.ToBoolean(dr["Disabled"]))
                 return 2;
-            if (Convert.ToString(dr["Password"]) != password)
+            if (Convert.ToString(dr["Password"]) != DESEncrypt.Encrypt(password))
                 return 3;
             return 0;
         }
