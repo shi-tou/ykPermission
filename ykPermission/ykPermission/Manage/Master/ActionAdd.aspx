@@ -4,22 +4,24 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>资源添加</title>
+    <title>资源添加-<%=AdminTitle %></title>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
         <table class="infotable" >
             <tr>
-                <td class="tr">父节点：</td>
+                <td class="tr">上一级：</td>
                 <td>
-                    <asp:DropDownList runat="server" ID="ddlParent" CssClass="txt">
-                        <asp:ListItem Value="0">根节点</asp:ListItem>
-                    </asp:DropDownList>
+                    <asp:TextBox runat="server" ID="txtParentCode" CssClass="txt"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="tr">类别：</td>
+                <td class="tr">资源编码：</td>
+                <td><asp:TextBox runat="server" ID="txtCode"  CssClass="easyui-validatebox txt" data-options="required:true" missingmessage="请输入编码"></asp:TextBox></td>
+            </tr>
+            <tr>
+                <td class="tr">类型：</td>
                 <td>
                     <asp:DropDownList runat="server" ID="ddlType" CssClass="txt">
                         <asp:ListItem Value="1">分栏</asp:ListItem>
@@ -30,15 +32,15 @@
             </tr>
             <tr>
                 <td style="width:100px;" class="tr">资源名称：</td>
-                <td><asp:TextBox ID="txtActionName" runat="server" CssClass="easyui-validatebox txt" data-options="required:true" missingmessage="请输入资源名称"></asp:TextBox></td>
+                <td><asp:TextBox ID="txtName" runat="server" CssClass="easyui-validatebox txt" data-options="required:true" missingmessage="请输入资源名称"></asp:TextBox></td>
             </tr>
             
             <tr>
-                <td class="tr">应用链接：</td>
+                <td class="tr">链接：</td>
                 <td><asp:TextBox ID="txtLink" runat="server" CssClass="txt"></asp:TextBox></td>
             </tr>
             <tr>
-                <td class="tr">触发事件：</td>
+                <td class="tr">事件：</td>
                 <td><asp:TextBox ID="txtAction" runat="server" CssClass="txt" ></asp:TextBox></td>
             </tr>
             <tr>
@@ -51,7 +53,7 @@
             </tr>
             <tr>
                 <td class="tr">禁用：</td>
-                <td><asp:CheckBox ID="cbDisabled" runat="server" /></td>
+                <td><asp:CheckBox ID="cbDisabled" runat="server"/></td>
             </tr>
         </table>
         <div class="action">

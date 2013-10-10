@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>用户管理-<%=AdminTitle %></title>
     <script src="/Manage/Style/js/master.js" type="text/javascript"></script>
 </head>
 <body>

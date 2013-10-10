@@ -48,33 +48,52 @@ namespace ykPermission.Service
         /// 获取网站栏目列表
         /// </summary>
         /// <returns></returns>
-        public string GetActionList()
+        public DataTable GetActionList(Hashtable hs)
         {
-            DataTable dt = masterDao.GetData("T_Action");
-            StringBuilder sb = new StringBuilder("");
-            sb.Append("[");
-            CreateTreejson(dt, "0", ref sb);
-            sb.Append("]");
-            return sb.ToString();
+            DataTable dt = masterDao.GetActionList(hs);
+            return dt;           
+        }
+        /// 角色列表
+        /// </summary>
+        public int GetGroupList(Pager p, Hashtable hs)
+        {
+            return masterDao.GetGroupList(p, hs);
         }
         /// <summary>
-        /// 递归
+        /// 保存角色
         /// </summary>
-        public void CreateTreejson(DataTable dt, string pid, ref StringBuilder sb)
+        /// <param name="dtGroup">角色</param>
+        /// <param name="dtGroupAction">权限</param>
+        /// <returns></returns>
+        public int SaveGroup(DataTable dtGroup, List<string> groupAction)
         {
-            DataTable dtTemp = Utils.SelectDataTable(dt, "ParentID=" + pid);
-            if (dtTemp.Rows.Count == 0)
-                return;
-            foreach (DataRow dr in dtTemp.Rows)
+            int res=0;
+            int groupID = 0;
+            if (dtGroup.Rows.Count == 0)
+                return res;
+            //添加或更新
+            if (dtGroup.Rows[0]["ID"] != null)
             {
-                sb.Append("{");
-                sb.AppendFormat("\"ID\":{0},\"PID\":{1},\"Type\":{2},\"ActionName\":\"{3}\" ,\"Action\":\"{4}\",\"Icon\":\"{5}\",\"Link\":\"{6}\",\"Sort\":{7},\"Disabled\":\"{8}\"",
-                    dr["ID"], dr["ParentID"],dr["Type"], dr["ActionName"], dr["Action"], dr["Icon"], dr["Link"],dr["Sort"], Convert.ToString(dr["Disabled"]).ToLower());
-                sb.Append(",\"children\":[");
-                CreateTreejson(dt, Convert.ToString(dr["ID"]), ref sb);
-                sb.Append("]},");
+                groupID = Convert.ToInt32(dtGroup.Rows[0]["ID"].ToString());
+                res = UpdateDataTable(dtGroup);
             }
-            sb.Remove(sb.Length - 1, 1);
+            else
+            {
+                groupID = Insert("T_Group", dtGroup);
+            }
+            //删除角色权限
+            Delete("T_ActionGroup", "GroupID=" + groupID);
+            //添加角色权限
+            DataTable dt = GetDataByKey("T_ActionGroup", "ID", 0);
+            groupAction.ForEach(g =>
+            {
+                DataRow dr = dt.NewRow();
+                dr["ActionCode"] = g;
+                dr["GroupID"] = groupID;
+                dt.Rows.Add(dr);
+            });
+            UpdateDataTable(dt);
+            return res;
         }
     }
 }

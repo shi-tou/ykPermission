@@ -14,4 +14,7 @@
 	<object type="Manage/Master/ActionAdd.aspx">
 		<property name="MasterService" ref="masterService"/>
 	</object>
+	<object type="Manage/Master/GroupAdd.aspx">
+		<property name="MasterService" ref="masterService"/>
+	</object>
 </objects>

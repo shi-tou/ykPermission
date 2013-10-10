@@ -67,5 +67,34 @@ namespace ykPermission.Common
                 return "";
             }
         }
+        #region CteateTreeJson
+        public static string CreateTreeJson(DataTable dt)
+        {
+            StringBuilder sb = new StringBuilder("");
+            sb.Append("[");
+            CreateTree(dt, "", ref sb);
+            sb.Append("]");
+            return sb.ToString();
+        }
+        /// <summary>
+        /// 递归
+        /// </summary>
+        public static void CreateTree(DataTable dt, string pCode, ref StringBuilder sb)
+        {
+            DataTable dtTemp = Utils.SelectDataTable(dt, string.Format("isnull(ParentCode,'')='{0}'", pCode));
+            if (dtTemp.Rows.Count == 0)
+                return;
+            foreach (DataRow dr in dtTemp.Rows)
+            {
+                sb.Append("{");
+                sb.AppendFormat("\"ID\":{0},\"Code\":\"{1}\",\"ParentCode\":\"{2}\",\"Type\":{3},\"Name\":\"{4}\" ,\"Action\":\"{5}\",\"Icon\":\"{6}\",\"Link\":\"{7}\",\"Sort\":{8},\"Disabled\":\"{9}\"",
+                    dr["ID"], dr["Code"], dr["ParentCode"], dr["Type"], dr["Name"], dr["Action"], dr["Icon"], dr["Link"], dr["Sort"], Convert.ToString(dr["Disabled"]).ToLower());
+                sb.Append(",\"children\":[");
+                CreateTree(dt, Convert.ToString(dr["Code"]), ref sb);
+                sb.Append("]},");
+            }
+            sb.Remove(sb.Length - 1, 1);
+        }
+        #endregion
     }
 }

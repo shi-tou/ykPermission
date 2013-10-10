@@ -6,6 +6,7 @@ using System.Web.Services;
 using System.Web.Services.Protocols;
 using ykPermission.Service;
 using ykPermission.Common;
+using System.Text;
 
 namespace ykPermission.Web.Manage.Ajax
 {
@@ -42,8 +43,21 @@ namespace ykPermission.Web.Manage.Ajax
         /// <param name="hc"></param>
         public void GetActionList(HttpContext hc)
         {
-            strJson = masterService.GetActionList();
+            Hashtable hs = new Hashtable();
+            DataTable dt = masterService.GetActionList(hs);
+            strJson = Utils.CreateTreeJson(dt);
             ResponseWrite(hc);
+        }
+        /// <summary>
+        /// 角色列表
+        /// </summary>
+        /// <param name="hc"></param>
+        public void GetGroupList(HttpContext hc)
+        {
+            Hashtable hs = new Hashtable();
+            Pager p = new Pager(PageSize, PageIndex, "a.CreateTime desc");
+            masterService.GetGroupList(p, hs);
+            ResponseWrite(hc, p);
         }
     }
 }

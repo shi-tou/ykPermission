@@ -22,13 +22,22 @@ namespace ykPermission.Web.Manage.Master {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// ddlParent control.
+        /// txtParentCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlParent;
+        protected global::System.Web.UI.WebControls.TextBox txtParentCode;
+        
+        /// <summary>
+        /// txtCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCode;
         
         /// <summary>
         /// ddlType control.
@@ -40,13 +49,13 @@ namespace ykPermission.Web.Manage.Master {
         protected global::System.Web.UI.WebControls.DropDownList ddlType;
         
         /// <summary>
-        /// txtActionName control.
+        /// txtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtActionName;
+        protected global::System.Web.UI.WebControls.TextBox txtName;
         
         /// <summary>
         /// txtLink control.
