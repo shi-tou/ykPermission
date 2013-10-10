@@ -4,7 +4,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+<<<<<<< HEAD
     <title>资源添加-<%=AdminTitle %></title>
+=======
+    <title>资源添加</title>
+>>>>>>> 006fc8a778f4be835b44e426de4bda4782222fb2
 </head>
 <body>
     <form id="form1" runat="server">

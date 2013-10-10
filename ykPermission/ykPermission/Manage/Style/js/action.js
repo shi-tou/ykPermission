@@ -51,6 +51,7 @@ function GetType(v) {
 }
 //添加
 function Add() {
+<<<<<<< HEAD
     var rows = GetSelectValue('ListTable');
     if (rows.length == 1) {
         Code = rows[0].Code;
@@ -58,13 +59,20 @@ function Add() {
     }
     else
         OpenWin('添加资源', 450, 430, '/Manage/Master/ActionAdd.aspx');
+=======
+    OpenWin('添加用户', 450, 400, '/Manage/Master/ActionAdd.aspx');
+>>>>>>> 006fc8a778f4be835b44e426de4bda4782222fb2
 }
 //修改
 function Edit() {
     var rows = GetSelectValue('ListTable');
     if (rows.length == 1) {
         id = rows[0].ID;
+<<<<<<< HEAD
         OpenWin('修改资源',450, 430, '/Manage/Master/ActionAdd.aspx?ID=' + id);
+=======
+        OpenWin('修改用户',450, 400, '/Manage/Master/ActionAdd.aspx?ID=' + id);
+>>>>>>> 006fc8a778f4be835b44e426de4bda4782222fb2
     }
     else {
         AlertInfo('操作提示', '请选择一条要修改的记录！');
