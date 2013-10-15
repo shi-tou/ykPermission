@@ -19,5 +19,10 @@ namespace ykPermission.Service
         /// 用户列表
         /// </summary>
         int GetMasterList(Pager p, Hashtable hs);
+        /// <summary>
+        /// 获取资源列表
+        /// </summary>
+        /// <returns></returns>
+        string GetActionList();
     }
 }

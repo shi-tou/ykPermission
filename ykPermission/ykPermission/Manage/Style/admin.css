@@ -18,8 +18,9 @@
 .tr{text-align:right;}
 .tb{ padding:5px; height:auto; display:none;}
 .win{display:none; padding: 0px; margin: auto;}
-.infotable{ line-height:30px;}
-.txt{width:148px; height:20px; line-height:20px;border:solid 1px #efefef;}
+.infotable{ line-height:30px; margin-top:20px;}
+.txt{width:148px; height:20px; line-height:20px;border:solid 1px #d4d4d4;}
+.txt:hover{ border:solid 1px #4BBA12}
 .textarea{width:250px; height:40px; font-size:13px;border:solid 1px #efefef;}
-.action{ border-top:solid 1px #efefef; padding-left:100px;}
-.btn{ width:112px; height:33px; border:none; background:url(images/login-btn.jpg) no-repeat; color:#fff;}
+.action{ border-top:solid 1px #efefef; padding:20px 0px 0px 100px;}
+.btn{ width:112px; height:33px; border:none; background:url(images/login-btn.jpg) no-repeat; color:#fff; cursor:pointer;}

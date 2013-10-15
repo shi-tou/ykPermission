@@ -72,16 +72,23 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Config\adminpage.xml" />
     <Content Include="Config\config.xml" />
     <Content Include="Config\fongpage.xml" />
+    <Content Include="Manage\Master\ActionAdd.aspx" />
+    <Content Include="Manage\Master\ActionList.aspx" />
     <Content Include="Manage\Style\admin.css" />
     <Content Include="Manage\index.aspx" />
+    <Content Include="Manage\Style\js\action.js" />
     <Content Include="Manage\Style\js\master.js" />
     <Content Include="Manage\Style\login.css" />
     <Content Include="Manage\Style\images\login-btn.jpg" />
@@ -596,6 +603,20 @@
     <Compile Include="Manage\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Manage\Master\ActionAdd.aspx.cs">
+      <DependentUpon>ActionAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Master\ActionAdd.aspx.designer.cs">
+      <DependentUpon>ActionAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Master\ActionList.aspx.cs">
+      <DependentUpon>ActionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Master\ActionList.aspx.designer.cs">
+      <DependentUpon>ActionList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Manage\Master\MasterAdd.aspx.cs">
       <DependentUpon>MasterAdd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -661,7 +682,7 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!--<Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />-->
   <ProjectExtensions>
     <VisualStudio>

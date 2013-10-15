@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ykPermission">
+</Property><Property Name="Solution File" Value="E:\学习Demo\ykPermission\ykPermission\ykPermission.sln">
+</Property><Property Name="Date" Value="2013年9月29日">
+</Property><Property Name="Time" Value="20:09">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="ykPermission.Web" Source="ykPermission\ykPermission.Web.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ykPermission.Web" Source="ykPermission\ykPermission.Web.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ykPermission.Service" Source="ykPermission.Service\ykPermission.Service.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="ykPermission.Service" Source="ykPermission.Service\ykPermission.Service.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="ykPermission.Dao" Source="ykPermission.Dao\ykPermission.Dao.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="ykPermission.Dao" Source="ykPermission.Dao\ykPermission.Dao.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="ykPermission.Common" Source="ykPermission.Common\ykPermission.Common.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="ykPermission.Common" Source="ykPermission.Common\ykPermission.Common.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="ykPermission.Model" Source="ykPermission.Model\ykPermission.Model.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="ykPermission.Model" Source="ykPermission.Model\ykPermission.Model.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="" Source="ykPermission.sln" Description="The solution file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="" Source="ykPermission.sln" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="ykPermission.Web" Source="ykPermission\ykPermission.Web.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

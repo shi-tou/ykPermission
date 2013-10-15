@@ -12,7 +12,7 @@ function GetList() {
     var queryParams = { 'action': 'GetMasterList'};
     var tab = $('#ListTable');
     tab.datagrid({
-        title: '游艇列表',
+        title: '用户列表',
         url: dealAjaxUrl(url),
         columns: [[
                         { field: 'ID', title: '', width: 30, align: 'center',checkbox: true },
@@ -31,18 +31,18 @@ function GetList() {
         nowrap: false
     });
     //设置分页
-    setPager(tab);
+    SetPager(tab);
 }
 //添加
 function Add() {
-    OpenWin('添加用户', 450, 300, '/Manage/Master/MasterAdd.aspx');
+    OpenWin('添加用户', 400, 300, '/Manage/Master/MasterAdd.aspx');
 }
 //修改
 function Edit() {
     var rows = GetSelectValue('ListTable');
     if (rows.length == 1) {
         id = rows[0].ID;
-        OpenMaxWin('修改用户', '/Manage/Master/MasterAdd.aspx?ID=' + id);
+        OpenWin('修改用户',400, 300, '/Manage/Master/MasterAdd.aspx?ID=' + id);
     }
     else {
         AlertInfo('操作提示', '请选择一条要修改的记录！');

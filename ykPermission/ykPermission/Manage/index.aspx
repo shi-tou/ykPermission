@@ -13,7 +13,7 @@
 <body class="easyui-layout">
     <form id="form1" runat="server">
         <!--顶部-->
-        <div data-options="region:'north',border:false,split:false" style="height:70px;background:#E6EEF8;padding:10px;">
+        <div data-options="region:'north',border:false,split:false" style="height:70px;background:#f2f2f2;padding:10px;">
             <div class="headL"><h1 style="float:left;">权限管理系统</h1><span style="float:left;">&nbsp;--&nbsp;power by yangliangbin</span></div>
             <div class="headR">当前时间：<span id="time"></span><span onclick="adminLoginOut();">退出登录</span></div>
         </div>
@@ -22,7 +22,7 @@
             <div class="easyui-accordion" data-options="fit:true,border:false" >
                 <div title="系统管理" style="padding:10px 10px 10px 20px;">
                     <ul class="menuUL">
-                        <li><a href="javascript:void(0)" onclick="add('AdminGroup',this)">权限管理</a></li>
+                        <li><a href="javascript:void(0)" onclick="add('Master/ActionList.aspx',this)">权限管理</a></li>
                         <li><a href="javascript:void(0)" onclick="add('AdminGroup',this)">角色管理</a></li>
                         <li><a href="javascript:void(0)" onclick="add('Master/MasterList.aspx',this)">用户管理</a></li>
                     </ul>
@@ -30,8 +30,8 @@
 			</div>
         </div>
         <!--内容-->
-	    <div data-options="region:'center',title:'欢迎登录权限管理系统',iconCls:'icon-tip'">
-            <div id="nav_tabs" class="easyui-tabs" data-options="border:false">
+	    <div data-options="region:'center',title:'',iconCls:'icon-tip'">
+            <div id="nav_tabs" class="easyui-tabs" data-options="fit:true,border:false">
 		        <div title="首页" style="padding:10px">
                    
 		        </div>		        

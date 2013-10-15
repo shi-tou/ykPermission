@@ -15,6 +15,7 @@
     <!--工具栏-->
     <div id="tb">
         <a href="#"  class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="Add()">添加</a> 
+        <a href="#"  class="easyui-linkbutton" iconcls="icon-edit" plain="true" onclick="Edit()">编辑</a>
     </div>
     <!--弹出窗-->
     <div id="win" class="easyui-window" style=" " data-options="iconCls:'icon-save',top:'50px',closed:true,minimizable:false,maximizable:false,collapsible:false">

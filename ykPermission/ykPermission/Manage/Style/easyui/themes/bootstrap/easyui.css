@@ -2140,7 +2140,7 @@ a.s-btn-plain-active {
 }
 .validatebox-tip {
   position: absolute;
-  width: 200px;
+  width: 100px;
   height: auto;
   display: none;
   z-index: 9900000;

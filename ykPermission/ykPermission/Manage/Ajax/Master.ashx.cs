@@ -36,5 +36,14 @@ namespace ykPermission.Web.Manage.Ajax
             masterService.GetMasterList(p, hs);
             ResponseWrite(hc, p);
         }
+        /// <summary>
+        /// 资源列表
+        /// </summary>
+        /// <param name="hc"></param>
+        public void GetActionList(HttpContext hc)
+        {
+            strJson = masterService.GetActionList();
+            ResponseWrite(hc);
+        }
     }
 }
