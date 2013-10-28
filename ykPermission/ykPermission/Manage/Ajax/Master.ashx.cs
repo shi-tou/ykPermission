@@ -6,6 +6,7 @@ using System.Web.Services;
 using System.Web.Services.Protocols;
 using ykPermission.Service;
 using ykPermission.Common;
+using System.Text;
 
 namespace ykPermission.Web.Manage.Ajax
 {
@@ -27,6 +28,16 @@ namespace ykPermission.Web.Manage.Ajax
         #endregion
 
         /// <summary>
+        /// 验证用户名是否存在
+        /// </summary>
+        /// <param name="hc"></param>
+        public void CheckUserName(HttpContext hc)
+        {
+            string userName = GetRequestStr("UserName", "");
+            DataTable dt = masterService.GetDataByKey("T_Master", "UserName", userName);
+            ResponseWrite(hc, dt.Rows.Count > 0 ? "0" : "1");
+        }
+        /// <summary>
         /// 用户列表
         /// </summary>
         public void GetMasterList(HttpContext hc)
@@ -37,13 +48,47 @@ namespace ykPermission.Web.Manage.Ajax
             ResponseWrite(hc, p);
         }
         /// <summary>
+        /// 验证资源Code是否存在
+        /// </summary>
+        /// <param name="hc"></param>
+        public void CheckActinCode(HttpContext hc)
+        {
+            string code = GetRequestStr("Code", "");
+            DataTable dt = masterService.GetDataByKey("T_Action", "Code", code);
+            ResponseWrite(hc, dt.Rows.Count > 0 ? "0" : "1");
+        }
+        /// <summary>
         /// 资源列表
         /// </summary>
         /// <param name="hc"></param>
         public void GetActionList(HttpContext hc)
         {
-            strJson = masterService.GetActionList();
+            Hashtable hs = new Hashtable();
+            DataTable dt = masterService.GetActionList(hs);
+            strJson = Utils.CreateTreeJson(dt);
             ResponseWrite(hc);
+        }
+
+        /// <summary>
+        /// 角色列表
+        /// </summary>
+        /// <param name="hc"></param>
+        public void GetGroupList(HttpContext hc)
+        {
+            Hashtable hs = new Hashtable();
+            Pager p = new Pager(PageSize, PageIndex, "a.CreateTime desc");
+            masterService.GetGroupList(p, hs);
+            ResponseWrite(hc, p);
+        }
+        /// <summary>
+        /// 删除角色
+        /// </summary>
+        /// <param name="hc"></param>
+        public void DeleteGroup(HttpContext hc)
+        {
+            int id = GetRequestInt("ID", 0);
+            int res = masterService.Delete("T_Group","ID", id.ToString());
+            ResponseWrite(hc, res > 0 ? "0" : "1");
         }
     }
 }

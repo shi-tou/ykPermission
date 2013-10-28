@@ -70,6 +70,11 @@ namespace ykPermission.Web.Manage
             hc.Response.ContentType = "text/plain";
             hc.Response.Write(strJson);
         }
+        public void ResponseWrite(HttpContext hc, string str)
+        {
+            hc.Response.ContentType = "text/plain";
+            hc.Response.Write("{\"res\":\"" + str + "\"}");
+        }
         public void ResponseWrite(HttpContext hc, Pager p)
         {
             hc.Response.ContentType = "text/plain";

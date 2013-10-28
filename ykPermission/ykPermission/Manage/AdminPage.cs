@@ -29,6 +29,16 @@ namespace ykPermission.Web.Manage
                 return (MasterInfo)Newtonsoft.Json.JsonConvert.DeserializeObject(str, typeof(MasterInfo));
             }
         }
+        /// <summary>
+        /// 后台Title
+        /// </summary>
+        public string AdminTitle
+        {
+            get
+            {
+                return Utils.GetConfig("AdminTitle");
+            }
+        }
         protected override void OnInit(EventArgs e)
         {
             RegisterIncScriptBlock();

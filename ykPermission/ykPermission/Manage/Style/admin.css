@@ -1,4 +1,4 @@
-﻿body,html{margin:0px; padding:0px;font-size:12px;}
+﻿body,html{margin:0px; padding:0px;font: 12px "微软雅黑", "宋体", Arial, Helvetica, sans-serif; color:#000;}
 /*--------index--------*/
 .headL{float:left; height:50px; line-height:50px;}
 .headL h1{ margin:0px; padding:0px; font-size:30px; font-family:黑体; font-weight:bold; color:#0E2D5F;}
@@ -23,4 +23,4 @@
 .txt:hover{ border:solid 1px #4BBA12}
 .textarea{width:250px; height:40px; font-size:13px;border:solid 1px #efefef;}
 .action{ border-top:solid 1px #efefef; padding:20px 0px 0px 100px;}
-.btn{ width:112px; height:33px; border:none; background:url(images/login-btn.jpg) no-repeat; color:#fff; cursor:pointer;}
+.btn{ width:112px; height:33px; font-size:15px; font-weight:bold; border:none; background:url(images/login-btn.jpg) no-repeat; color:#fff; cursor:pointer;}

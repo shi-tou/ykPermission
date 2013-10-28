@@ -7,27 +7,37 @@ $(function() {
     GetList();
 });
 var url = '/Manage/Ajax/Master.ashx';
-//获取用户列表
+//获取资源列表
 function GetList() {
-    var queryParams = { 'action': 'GetActionList'};
+    var queryParams = { 'action': 'GetActionList' };
     var tab = $('#ListTable');
     tab.treegrid({
         title: '栏目列表',
         url: dealAjaxUrl(url),
-        idField: 'ID',
-        treeField: 'ActionName',
+        idField: 'Code',
+        treeField: 'Name',
         animate: true,
-        columns: [[
+        fitColumns: false,
+        showFooter: true,
+        frozenColumns:[[
             { field: 'ID', width: 30, align: '', checkbox: true },
-            { field: 'ActionName', title: '名称', width: 180, align: 'center' },
+            { field: 'Name', title: '名称', width: 150, align: '' },
+            { field: 'Code', title: '编码', width: 120, align: 'center' },
+        ]],
+        columns: [[
+            { field: 'Type', title: '类别', width: 80, align: 'center', formatter: GetType },
             { field: 'Link', title: '链接', width: 150, align: 'center' },
-            { field: 'Action', title: '动作', width: 150, align: 'center' },
-            { field: 'Type', title: '类别', width: 100, align: 'center',formatter:GetType },
+            { field: 'Action', title: '事件', width: 150, align: 'center' },
+            { field: 'Icon', title: '图标', width: 100, align: 'center' },
+            { field: 'ParentCode', title: '上一级编码', width: 120, align: 'center' },
             { field: 'Sort', title: '排序号', width: 100, align: 'center' },
             { field: 'Disabled', title: '禁用', width: 100, align: 'center', formatter: GetDisabled }
         ]],
+        loadMsg: '正在加载数据，请稍候……',
         queryParams: queryParams,
-        onContextMenu: OnContextMenu
+        pagination: false,
+        rownumbers: true,
+        singleSelect:false
     });
 }
 //资源类别
@@ -41,14 +51,20 @@ function GetType(v) {
 }
 //添加
 function Add() {
-    OpenWin('添加用户', 450, 400, '/Manage/Master/ActionAdd.aspx');
+    var rows = GetSelectValue('ListTable');
+    if (rows.length == 1) {
+        Code = rows[0].Code;
+        OpenWin('修改资源', 450, 430, '/Manage/Master/ActionAdd.aspx?ParentCode=' + Code);
+    }
+    else
+        OpenWin('添加资源', 450, 430, '/Manage/Master/ActionAdd.aspx');
 }
 //修改
 function Edit() {
     var rows = GetSelectValue('ListTable');
     if (rows.length == 1) {
         id = rows[0].ID;
-        OpenWin('修改用户',450, 400, '/Manage/Master/ActionAdd.aspx?ID=' + id);
+        OpenWin('修改资源',450, 430, '/Manage/Master/ActionAdd.aspx?ID=' + id);
     }
     else {
         AlertInfo('操作提示', '请选择一条要修改的记录！');

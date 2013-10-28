@@ -12,11 +12,11 @@ namespace ykPermission.Service
         /// <summary>
         /// 插入记录
         /// </summary>
-        int Insert(string tableName, DataTable dt);
+        int Insert( DataTable dt);
         /// <summary>
         /// 修改记录
         /// </summary>
-        int Update(string tableName, DataTable dt, string where);
+        int Update( DataTable dt, string where);
         /// <summary>
         /// 更新DataTable
         /// </summary>

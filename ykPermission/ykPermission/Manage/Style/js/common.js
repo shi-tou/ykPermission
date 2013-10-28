@@ -166,7 +166,7 @@ function GetSelectValue(tab) {
 }
 //禁用状态
 function GetDisabled(v) {
-    if (v || v == 'true') {
+    if (v == true || v == 'True' || v == 'true') {
         return '<span style="color:red;">是<span>';
     }
     else
@@ -197,15 +197,4 @@ function SetWinHeight(obj, height) {
             }
         }
     }
-//    var win = obj;
-//    if (document.getElementById) {
-//        if (win && !window.opera) {
-//            if (win.contentDocument && win.contentDocument.body.offsetHeight) {
-//                win.height = ((win.contentDocument.body.offsetHeight < height) ? height : win.contentDocument.body.offsetHeight);
-//            }
-//            else if (win.Document && win.Document.body.scrollHeight) {
-//                win.height = ((win.Document.body.scrollHeight < height) ? height : win.Document.body.scrollHeight);
-//            }
-//        }
-//    }
 }
