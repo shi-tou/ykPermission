@@ -20,13 +20,14 @@
         <!--左侧菜单-->
 	    <div data-options="region:'west',split:true,title:'系统菜单',iconCls:'icon-menuflag'" style="width:150px;">
             <div class="easyui-accordion" data-options="fit:true,border:false" >
-                <div title="系统管理" style="padding:10px 10px 10px 20px;">
+                <%--<div title="系统管理" style="padding:10px 10px 10px 20px;">
                     <ul class="menuUL">
-                        <li><a href="javascript:void(0)" onclick="add('Master/ActionList.aspx',this)">权限管理</a></li>
-                        <li><a href="javascript:void(0)" onclick="add('AdminGroup',this)">角色管理</a></li>
+                        <li><a href="javascript:void(0)" onclick="add('Master/ActionList.aspx',this)">资源管理</a></li>
+                        <li><a href="javascript:void(0)" onclick="add('Master/GroupList.aspx',this)">角色管理</a></li>
                         <li><a href="javascript:void(0)" onclick="add('Master/MasterList.aspx',this)">用户管理</a></li>
                     </ul>
-                </div>
+                </div>--%>
+                <%=StrMenu%>
 			</div>
         </div>
         <!--内容-->

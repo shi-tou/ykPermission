@@ -21,16 +21,16 @@ namespace ykPermission.Service
         /// <summary>
         /// 插入记录
         /// </summary>
-        public int Insert(string tableName, DataTable dt)
+        public int Insert(DataTable dt)
         {
-            return baseDao.Insert(tableName, dt);
+            return baseDao.Insert(dt);
         }
         /// <summary>
         /// 修改记录
         /// </summary>
-        public int Update(string tableName, DataTable dt, string where)
+        public int Update( DataTable dt, string where)
         {
-            return baseDao.Update(tableName, dt, where);
+            return baseDao.Update(dt, where);
         }
         /// <summary>
         /// 更新DataTable

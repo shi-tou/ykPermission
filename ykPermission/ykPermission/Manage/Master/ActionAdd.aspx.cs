@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -17,9 +16,19 @@ namespace ykPermission.Web.Manage.Master
         {
             set { masterService = value; }
         }
+        /// <summary>
+        /// 修改的资源编码
+        /// </summary>
         private int _ID
         {
             get { return GetRequestInt("ID", 0); }
+        }
+        /// <summary>
+        /// 添加子节点的父编码
+        /// </summary>
+        private string ParentCode
+        {
+            get { return GetRequestStr("ParentCode", ""); }
         }
         /// <summary>
         /// 页面加载
@@ -30,7 +39,12 @@ namespace ykPermission.Web.Manage.Master
         {
             if (!IsPostBack)
             {
-                BindInfo();
+                if (_ID != 0)
+                    BindInfo();
+                if (ParentCode != "")
+                    this.txtParentCode.Text = ParentCode;
+                this.txtParentCode.ReadOnly = true;
+                this.txtParentCode.Attributes.Add("style","background:#eee;");
             }
         }
         /// <summary>
@@ -38,15 +52,14 @@ namespace ykPermission.Web.Manage.Master
         /// </summary>
         private void BindInfo()
         {
-            if(_ID==0)
-                return;
             DataTable dt=masterService.GetDataByKey("T_Action","ID",_ID);
             if (dt.Rows.Count == 0)
                 return;
             DataRow dr = dt.Rows[0];
-            this.ddlParent.SelectedValue = Convert.ToString(dr["ParentID"]);
+            this.txtParentCode.Text = Convert.ToString(dr["ParentCode"]);
             this.ddlType.SelectedValue = Convert.ToString(dr["Type"]);
-            this.txtActionName.Text = Convert.ToString(dr["ActionName"]);
+            this.txtCode.Text = Convert.ToString(dr["Code"]);
+            this.txtName.Text = Convert.ToString(dr["Name"]);
             this.txtLink.Text = Convert.ToString(dr["Link"]);
             this.txtAction.Text = Convert.ToString(dr["Action"]);
             this.txtIcon.Text = Convert.ToString(dr["Icon"]);
@@ -63,16 +76,19 @@ namespace ykPermission.Web.Manage.Master
             DataTable dt = masterService.GetDataByKey("T_Action", "ID", _ID);
             DataRow dr;
             if (dt.Rows.Count == 0)
+            {
                 dr = dt.NewRow();
+            }
             else
                 dr = dt.Rows[0];
-            dr["ParentID"] = this.ddlParent.SelectedValue;
             dr["Type"] = this.ddlType.SelectedValue;
-            dr["ActionName"] = this.txtActionName.Text;
+            dr["Code"] = this.txtCode.Text;
+            dr["Name"] = this.txtName.Text;
             dr["Link"] = this.txtLink.Text;
             dr["Action"] = this.txtAction.Text;
             dr["Icon"] = this.txtIcon.Text;
-            dr["Sort"] = this.txtSort.Text;
+            dr["ParentCode"] = this.txtParentCode.Text;
+            dr["Sort"] = this.txtSort.Text == "" ? "0" : this.txtSort.Text;
             dr["Disabled"] = this.cbDisabled.Checked;
             if (dt.Rows.Count == 0)
                 dt.Rows.Add(dr);

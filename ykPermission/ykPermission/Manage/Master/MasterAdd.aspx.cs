@@ -10,6 +10,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using ykPermission.Service;
 using ykPermission.Common;
+using System.Collections.Generic;
 
 namespace ykPermission.Web.Manage.Master
 {
@@ -33,19 +34,32 @@ namespace ykPermission.Web.Manage.Master
         {
             if (!IsPostBack)
             {
-                BindInfo();
+                BindGroup();
+                if(_ID!=0)
+                    BindInfo();
             }
         }
         public void BindInfo()
         {
-            if (_ID == 0)
-                return;
             DataTable dt = masterService.GetDataByKey("T_Master", "ID", _ID);
             DataRow dr=dt.Rows[0];
             this.txtUserName.Text = Convert.ToString(dr["UserName"]);
             this.txtPassword.Attributes.Remove("data-options");
             this.txtMasterName.Text = Convert.ToString(dr["MasterName"]);
             this.cbDisabled.Checked = Convert.ToBoolean(dr["Disabled"]);
+            DataTable dtGroup = masterService.GetDataByKey("T_MasterGroup", "MasterID", _ID);
+            SetGroup(dtGroup);
+        }
+        /// <summary>
+        /// 绑定权限组
+        /// </summary>
+        public void BindGroup()
+        {
+            DataTable dt = masterService.GetData("T_Group");
+            cblGroup.DataSource = dt;
+            cblGroup.DataTextField = "GroupName";
+            cblGroup.DataValueField = "ID";
+            cblGroup.DataBind();
         }
         /// <summary>
         /// 添加
@@ -72,11 +86,41 @@ namespace ykPermission.Web.Manage.Master
             dr["Disabled"] = this.cbDisabled.Checked;
             if (dt.Rows.Count == 0)
                 dt.Rows.Add(dr);
-            int res = masterService.UpdateDataTable(dt);
+            int res = masterService.SaveMasterInfo(dt, GetGroup());
             if (res > 0)
                 InvokeScript("CloseWin('添加成功！',parent.GetList)");
             else
                 InvokeScript("CloseWin('添加失败！')");
+        }
+        /// <summary>
+        /// 获取权限组
+        /// </summary>
+        /// <returns></returns>
+        public List<string> GetGroup()
+        {
+            List<string> list = new List<string>();
+            foreach (ListItem li in this.cblGroup.Items)
+            {
+                if (li.Selected)
+                    list.Add(li.Value);
+            }
+            return list;
+        }
+        /// <summary>
+        /// 设置权限组
+        /// </summary>
+        public void SetGroup(DataTable dt)
+        {
+            if (dt == null || dt.Rows.Count == 0)
+                return;
+            foreach (DataRow dr in dt.Rows)
+            {
+                foreach (ListItem li in this.cblGroup.Items)
+                {
+                    if (li.Value == Convert.ToString(dr["GroupID"]))
+                        li.Selected = true;
+                }
+            }
         }
     }
 }

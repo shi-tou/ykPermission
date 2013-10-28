@@ -4,6 +4,9 @@
 	<object type="Manage/Login.aspx">
 		<property name="MasterService" ref="masterService"/>
 	</object>
+  <object type="Manage/Index.aspx">
+    <property name="MasterService" ref="masterService"/>
+  </object>
   <!--Master.ashx-->
 	<object type="ykPermission.Web.Manage.Ajax.Master,ykPermission.Web">
 		<property name="MasterService" ref="masterService"/>
@@ -12,6 +15,9 @@
 		<property name="MasterService" ref="masterService"/>
 	</object>
 	<object type="Manage/Master/ActionAdd.aspx">
+		<property name="MasterService" ref="masterService"/>
+	</object>
+	<object type="Manage/Master/GroupAdd.aspx">
 		<property name="MasterService" ref="masterService"/>
 	</object>
 </objects>

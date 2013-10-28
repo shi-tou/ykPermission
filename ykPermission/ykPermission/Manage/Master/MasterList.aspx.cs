@@ -10,7 +10,10 @@ namespace ykPermission.Web.Manage.Master
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                this.ToolBar1.ActionCode = "MasterList";
+            }
         }
     }
 }

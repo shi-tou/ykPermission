@@ -35,14 +35,14 @@ function GetList() {
 }
 //添加
 function Add() {
-    OpenWin('添加用户', 400, 300, '/Manage/Master/MasterAdd.aspx');
+    OpenWin('添加用户', 430, 330, '/Manage/Master/MasterAdd.aspx');
 }
 //修改
 function Edit() {
     var rows = GetSelectValue('ListTable');
     if (rows.length == 1) {
         id = rows[0].ID;
-        OpenWin('修改用户',400, 300, '/Manage/Master/MasterAdd.aspx?ID=' + id);
+        OpenWin('修改用户',430, 330, '/Manage/Master/MasterAdd.aspx?ID=' + id);
     }
     else {
         AlertInfo('操作提示', '请选择一条要修改的记录！');

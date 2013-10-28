@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>用户添加</title>
+    <title>用户添加-<%=AdminTitle %></title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -28,6 +28,14 @@
             <tr>
                 <td class="tr">禁用：</td>
                 <td><asp:CheckBox ID="cbDisabled" runat="server" /></td>
+            </tr>
+            <tr>
+                <td class="tr">所属角色:</td>
+                <td>
+                    <div style=" width:auto; max-height:60px; overflow:auto;">
+                    <asp:CheckBoxList runat="server" ID="cblGroup" RepeatColumns="3" RepeatDirection="Vertical"></asp:CheckBoxList>
+                    </div>
+                </td>
             </tr>
         </table>
         <div class="action">

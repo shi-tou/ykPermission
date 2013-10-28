@@ -19,31 +19,47 @@ namespace ykPermission.Dao
         /// <summary>
         /// 插入记录
         /// </summary>
-        public int Insert(string tableName, DataTable dt)
+        /// <param name="h"></param>
+        /// <returns></returns>
+        public int Insert(DataTable dt)
         {
-            StringBuilder sbSql = new StringBuilder();
-            StringBuilder sbFidle = new StringBuilder();
-            StringBuilder sbValue = new StringBuilder();
-            for (int i = 0; i < dt.Columns.Count; i++)
+            if (dt.Rows.Count > 0)
             {
-                if (i != 0)
+                string tableName = dt.TableName;
+                IDbParameters param = AdoTemplate.CreateDbParameters();
+                string sql = "insert into " + tableName + "(";
+                string cols = "";
+                string vals = "";
+                DataRow dr = dt.Rows[0];
+                foreach (DataColumn col in dt.Columns)
                 {
-                    sbFidle.Append(",");
-                    sbFidle.Append(",");
+                    string key = col.ColumnName;
+
+                    if (dr[key] != DBNull.Value && key != "_is_add")
+                    {
+                        cols += key + ",";
+                        vals += "@" + key + ",";
+                        param.AddWithValue(key, dr[key]);
+                    }
                 }
-                sbFidle.AppendFormat("[{0}]", dt.Columns[i].ColumnName);
-                sbValue.Append(dt.Rows[0][i].ToString());
+                cols = cols.Substring(0, cols.Length - 1);
+                vals = vals.Substring(0, vals.Length - 1);
+                sql += cols + ")values(" + vals + ") select @@identity";
+                Object objValue = AdoTemplate.ExecuteScalar(CommandType.Text, sql, param);
+                if (objValue == null)
+                    return 0;
+                else
+                    return Convert.ToInt32(objValue);
             }
-            sbSql.AppendFormat("insert into {0} ({1}) values ({2})", tableName, sbFidle, sbValue);
-            return AdoTemplate.ExecuteNonQuery(CommandType.Text, sbSql.ToString());
+            else { return 0; }
         }
         /// <summary>
         /// 修改记录
         /// </summary>
-        public int Update(string tableName, DataTable dt, string where)
+        public int Update( DataTable dt, string where)
         {
             StringBuilder sbSql = new StringBuilder();
-            sbSql.AppendFormat("update {0} set ", tableName);
+            sbSql.AppendFormat("update {0} set ", dt.TableName);
             for (int i = 0; i < dt.Columns.Count; i++)
             {
                 if (i != 0)
